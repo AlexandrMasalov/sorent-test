@@ -1,3 +1,6 @@
-const $div = document.createElement('div');
-$div.innerText = 'loren';
-document.body.prepend($div);
+const $formCity = document.formCity;
+
+$formCity.addEventListener('keyup', (e) => {
+  console.log(e.target.value);
+});
+

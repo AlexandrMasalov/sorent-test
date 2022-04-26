@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_
   \***********************/
 /***/ (() => {
 
-eval("var $div = document.createElement('div');\n$div.innerText = 'loren';\ndocument.body.prepend($div);\n\n//# sourceURL=webpack://soren-test/./src/js/add.js?");
+eval("var $formCity = document.formCity;\n$formCity.addEventListener('keyup', function (e) {\n  console.log(e.target.value);\n});\n\n//# sourceURL=webpack://soren-test/./src/js/add.js?");
 
 /***/ }),
 
