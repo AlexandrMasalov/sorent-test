@@ -17,8 +17,31 @@
         <option>Десертные</option>
         <option>Диджестивы</option>
         <option>Молочные</option>
-        <option>Слоистые</option>
+        <option>Слоистые</option>    
       </datalist> 
     </form>
+    <script>
+
+      function gotCities ({ searchContext, result }) {
+        
+        const $datalist = document.getElementById('cities');
+        while ($datalist.firstChild) {
+            $datalist.removeChild($datalist.firstChild);
+          };
+
+        result.map(function(item) {
+
+          if (item.name !== 'Бесплатная версия kladr-api.ru') {
+            item.name;
+            console.log(item.name);
+            const $option = document.createElement('option');
+            $option.innerText = item.name;
+            $datalist.append($option);
+            console.log($datalist);
+          }
+        })
+      };
+
+    </script>
   </body>
 </html>

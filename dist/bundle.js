@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_
   \***********************/
 /***/ (() => {
 
-eval("var $formCity = document.formCity;\n$formCity.addEventListener('keyup', function (e) {\n  console.log(e.target.value);\n});\n\n//# sourceURL=webpack://soren-test/./src/js/add.js?");
+eval("var $formCity = document.formCity;\n$formCity.addEventListener('keyup', function (e) {\n  var $script = document.createElement('script');\n  console.log(e.target.value);\n  var city = e.target.value;\n  $script.src = \"https://kladr-api.ru/api.php?query=\".concat(city, \"&contentType=city&callback=gotCities\");\n  document.body.append($script);\n});\n\n//# sourceURL=webpack://soren-test/./src/js/add.js?");
 
 /***/ }),
 
