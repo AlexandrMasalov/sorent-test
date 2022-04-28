@@ -8,34 +8,33 @@
     <script defer src="bundle.js"></script>
   </head>
   <body>
-    <form name="formCity">
-      <label for="cities">Города</label>
-      <input list="cities" type="text" value="">
-      <datalist id="cities">
-      </datalist> 
+    <form name="formCity" class="search-form-city">
+      <label for="cities" class="search-form-city__label">Города</label>
+      <input class="search-form-city__input" list="cities" type="text" value="">
+      <datalist id="cities" class="search-form-city__datalist"></datalist> 
     </form>
     <script>
-
+      
       function gotCities ({ searchContext, result }) {
         
         const $datalist = document.getElementById('cities');
         while ($datalist.firstChild) {
-            $datalist.removeChild($datalist.firstChild);
-          };
-
+          $datalist.removeChild($datalist.firstChild);
+        };
+        
         result.map(function(item) {
-
+          
           if (item.name !== 'Бесплатная версия kladr-api.ru') {
             item.name;
-            console.log(item.name);
             const $option = document.createElement('option');
+            $option.classList.add('search-form-city__option', 'search-form-city__option_get-city');
             $option.innerText = item.name;
             $datalist.append($option);
-            console.log($datalist);
           }
         })
       };
-
+      
     </script>
+    <script id="url"></script>
   </body>
 </html>
